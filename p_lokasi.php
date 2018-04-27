@@ -5,10 +5,12 @@
     <?php include_once 'layouts/header.php'; ?>
     <?php include_once 'controller/includeleaflet.php' ?>
     <?php include_once 'controller/getdatalokasi.php' ?>
+    <?php include_once 'controller/getdatabank.php' ?>
 
     <script>
 
      var argeojson = <?php echo json_encode($data) ?>;
+     var argeojsonbank=<?php echo json_encode($bank)?>
 
     </script>
 
@@ -48,8 +50,8 @@ crossorigin=""/>
                     <div class="list-group" id="list-tab" role="tablist">
                       <a class="list-group-item list-group-item-action active" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings" onclick="gpsLokasi()">Posisi Saya</a>
                       <a class="list-group-item list-group-item-action " id="list-home-list" data-toggle="list" role="tab" aria-controls="home" onclick="lokasiSampah()">Lokasi Sampah</a>
-                      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" role="tab" aria-controls="profile">Lokasi TPA</a>
-                      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list"  role="tab" aria-controls="messages">Bank Sampah</a>
+                      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" role="tab" aria-controls="profile" onclick="lokasitpa()">Lokasi TPA</a>
+                      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list"  role="tab" aria-controls="messages" onclick="lokasibanksampah()">Bank Sampah</a>
 
                     </div>
                   </div>
