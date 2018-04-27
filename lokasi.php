@@ -47,6 +47,9 @@
                       <a class="list-group-item list-group-item-action " id="list-home-list" data-toggle="list" role="tab" aria-controls="home" onclick="lokasiSampah()">Lokasi Sampah</a>
                       <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" role="tab" aria-controls="profile" onclick="lokasitpa()">Lokasi TPA</a>
                       <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list"  role="tab" aria-controls="messages" onclick="lokasibanksampah()">Bank Sampah</a>
+                      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list"  role="tab" aria-controls="messages" onclick="rute()">Rute</a>
+                      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list"  role="tab" aria-controls="messages" onclick="removeNewMarker()">Remove Marker</a>
+
 
                     </div>
                   </div>

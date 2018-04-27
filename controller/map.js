@@ -10,6 +10,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 var latlng;
 var latAwal;
 var lonAwal;
+var newMarker=[];
 function gpsLokasi()
 {
 
@@ -100,5 +101,85 @@ function lokasibanksampah()
     marker[j].bindPopup("<b>"+argeojsonbank[j]['name']+"</b>"+"<br/>"+argeojsonbank[j]['description']);
    j++;
   }
+
+}
+
+
+function gps()
+{
+
+  navigator.geolocation.getCurrentPosition(function(location) {
+    var latlng = new L.LatLng(location.coords.latitude, location.coords.longitude);
+    mymap.setView(latlng, 12);
+    newMarker = new L.marker(latlng).addTo(mymap);
+    latAwal=location.coords.latitude;
+    lonAwal=location.coords.longitude;
+
+  });
+
+console.log("Posisi GPS otomatis");
+
+}
+
+function removeNewMarker()
+{
+
+  var i=0;
+  var jumlahNewMarker=newMarker.length;
+  console.log(jumlahNewMarker);
+  while (i<jumlahNewMarker)
+  {
+  mymap.removeLayer(newMarker[i]);
+  i++;
+  }
+  jumlahNewMarker=0;
+}
+
+var jumlahNewMarker=0;
+function manual()
+{
+  var tanda;
+  swal("Pilih Posisi Sampah tersebut");
+  mymap.on('click', function(e) {
+          newMarker[jumlahNewMarker] = new L.marker(e.latlng).addTo(mymap);
+          latitude=e.latlng.lat;
+          longitude=e.latlng.lng;
+          latAwal=latitude;
+          lonAwal=longitude;
+          console.log(latAwal);
+          console.log(lonAwal);
+          jumlahNewMarker++;
+  });
+  latAwal=latitude;
+  lonAwal=longitude;
+
+}
+
+
+
+function rute()
+{
+
+
+  swal({
+title: "Posisi GPS?",
+text: "Apabila posisi GPS tidak akurat anda bisa memilih posisi manual!!",
+icon: "warning",
+buttons: true,
+dangerMode: false,
+})
+.then((willDelete) => {
+if (willDelete) {
+  gps();
+  swal("Posisi GPS Dipilih", {
+
+
+  });
+} else {
+  swal("Klik Peta untuk posisi manual");
+  manual();
+}
+});
+
 
 }

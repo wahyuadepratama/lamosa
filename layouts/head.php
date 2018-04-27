@@ -4,9 +4,10 @@
   <script src="assets/js/jquery-3.0.0.js" charset="utf-8"></script>
   <script src="assets/js/popper.min.js" charset="utf-8"></script>
   <script src="assets/bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
   <style>
-    #mapid { height: 370px; }
+    #mapid { height: 470px; }
   </style>
 
 </head>
