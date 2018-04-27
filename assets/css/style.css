@@ -1,0 +1,133 @@
+li.nav-item.active{
+  background-color: green;
+}
+li.nav-item.active>a.nav-link{
+  color:white !important;
+}
+.description{
+  width: 100%;
+}
+.pict{
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+}
+.row.home{
+  padding: 20px;
+}
+.footer{
+  padding: 20px;
+  background-color: grey;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap:20px;
+  grid-template-areas:
+  "content-1"
+  "content-2"
+  "content-3"
+}
+.content-1{grid-area:content-1;}
+.content-2{grid-area:content-2;}
+.content-3{grid-area:content-3;}
+
+.content-1{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+  "desc desc pict"
+}
+.content-2{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+  "pict desc desc"
+}
+.content-3{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+  "desc desc pict"
+}
+.pict{grid-area:pict;align-self: center;justify-self:center}
+.desc{grid-area:desc;}
+
+.grid-login{
+  padding-top: 80px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap:50px;
+  grid-template-areas:
+  "login-box"
+  "footer-login"
+}
+.login-box{grid-area:login-box; align-self: center;justify-self:center; text-align: justify}
+.footer-login{grid-area:footer-login}
+
+a.list-group-item.title{
+  text-align: center; background-color: #ddd;
+}
+div.list-group-item.title{
+  text-align: left; background-color: #ddd;
+}
+.menu-sidebar{
+  margin-top: 20px;
+}
+
+#map{
+  width: 100%;
+  background-color: pink;
+}
+
+.grid-location{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-gap:20px;
+  grid-template-areas:
+  "sidebarku contentku contentku"
+  "location-info location-info location-info"
+}
+.sidebarku{grid-area:sidebarku}
+.contentku{grid-area:contentku}
+.location-info{grid-area:location-info;}
+
+.content-info{
+  min-height: 150px;
+  background-color: #eee;
+  padding: 10px;
+}
+
+.grid-input-data{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr;
+  grid-gap: 20px;
+  grid-template-areas:
+  "data-lokasi data-lokasi keterangan"
+}
+.data-lokasi{grid-area:data-lokasi;}
+.keterangan{grid-area:keterangan;min-width: 300px}
+
+.data-lokasi{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-areas:
+  "data-info upload-foto"
+}
+.data-info{
+ grid-area: data-info;
+}
+.upload-foto{
+  grid-area: upload-foto;
+}
+@media screen and (max-width:991px) {
+
+}
