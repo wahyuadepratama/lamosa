@@ -3,9 +3,9 @@
   <?php include_once 'layouts/head.php'; ?>
   <body>
     <?php include_once 'layouts/header.php'; ?>
-    <?php include_once 'controller/includeleaflet.php' ?>
-    <?php include_once 'controller/getdatalokasi.php' ?>
-    <?php include_once 'controller/getdatabank.php' ?>
+    <?php include_once 'layouts/includeleaflet.php' ?>
+    <?php include_once 'controller/GetDataLokasi.php' ?>
+    <?php include_once 'controller/GetDataBank.php' ?>
 
     <script>
 
@@ -14,14 +14,9 @@
 
     </script>
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
-integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
-crossorigin=""/>
-
-<!-- Make sure you put this AFTER Leaflet's CSS -->
-<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
-  integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
-  crossorigin=""></script>
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="crossorigin=""/>
+      <!-- Make sure you put this AFTER Leaflet's CSS -->
+      <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="crossorigin=""></script>
 
       <div class="container" style="padding-top:30px;">
         <div class="grid-location">
@@ -111,13 +106,13 @@ crossorigin=""/>
         </div>
         <!-- END CONTAINER -->
         <?php include_once 'layouts/footer.php'; ?>
+
       <script src="assets/js/map.js" charset="utf-8"></script>
-      <!-- <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaKLihHUYfMPMCdAgzPlsXamo9BthmImk&callback=initMap">
-      </script> -->
+        <!-- <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaKLihHUYfMPMCdAgzPlsXamo9BthmImk&callback=initMap">
+        </script> -->
 
-      <script src="controller/map.js">
-
+        <script src="controller/map.js">
       </script>
 
   </body>

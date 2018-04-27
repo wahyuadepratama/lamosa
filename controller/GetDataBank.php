@@ -1,6 +1,6 @@
 <?php
 
-include 'connect.php';
+include 'Connect.php';
 $query = "SELECT * FROM junk_bank";
 $query2=mysqli_query($konek, $query);
 
@@ -21,11 +21,4 @@ while ($row = mysqli_fetch_array($query2))
 }
 
 // echo json_encode($data);
-
-
-
-
-
-
-
- ?>
+?>
