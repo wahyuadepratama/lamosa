@@ -3,12 +3,29 @@
   <?php include_once 'layouts/head.php'; ?>
   <body>
     <?php include_once 'layouts/header.php'; ?>
+    <?php include_once 'controller/includeleaflet.php' ?>
+    <?php include_once 'controller/getdatalokasi.php' ?>
+
+    <script>
+
+     var argeojson = <?php echo json_encode($data) ?>;
+
+    </script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+crossorigin=""/>
+
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
+  integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+  crossorigin=""></script>
 
       <div class="container" style="padding-top:30px;">
         <div class="grid-location">
           <div class="contentku" id="map">
             <div class="tab-content" id="nav-tabContent">
-              <div class="tab-pane fade show active" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list"><div id="map"></div></div>
+              <div class="tab-pane fade show active" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list"><div id="mapid"></div></div>
               <div class="tab-pane fade" id="list-home" role="tabpanel" aria-labelledby="list-home-list"></div>
               <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">Profile</div>
               <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">message</div>
@@ -29,10 +46,10 @@
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                   <div class="card-body">
                     <div class="list-group" id="list-tab" role="tablist">
-                      <a class="list-group-item list-group-item-action active" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Posisi Saya</a>
-                      <a class="list-group-item list-group-item-action " id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Lokasi Sampah</a>
-                      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Lokasi TPA</a>
-                      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Bank Sampah</a>
+                      <a class="list-group-item list-group-item-action active" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings" onclick="gpsLokasi()">Posisi Saya</a>
+                      <a class="list-group-item list-group-item-action " id="list-home-list" data-toggle="list" role="tab" aria-controls="home" onclick="lokasiSampah()">Lokasi Sampah</a>
+                      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" role="tab" aria-controls="profile">Lokasi TPA</a>
+                      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list"  role="tab" aria-controls="messages">Bank Sampah</a>
 
                     </div>
                   </div>
@@ -93,8 +110,13 @@
         <!-- END CONTAINER -->
         <?php include_once 'layouts/footer.php'; ?>
       <script src="assets/js/map.js" charset="utf-8"></script>
-      <script async defer
+      <!-- <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaKLihHUYfMPMCdAgzPlsXamo9BthmImk&callback=initMap">
+      </script> -->
+
+      <script src="controller/map.js">
+
       </script>
+
   </body>
 </html>
