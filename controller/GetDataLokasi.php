@@ -1,6 +1,6 @@
 <?php
 
-include 'connect.php';
+include 'Connect.php';
 $query = "SELECT * FROM location";
 $query2=mysqli_query($konek, $query);
 
