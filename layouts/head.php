@@ -5,4 +5,8 @@
   <script src="assets/js/popper.min.js" charset="utf-8"></script>
   <script src="assets/bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
 
+  <style>
+    #mapid { height: 370px; }
+  </style>
+
 </head>
