@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 25, 2018 at 03:10 PM
+-- Generation Time: Apr 27, 2018 at 06:09 AM
 -- Server version: 10.0.34-MariaDB-0ubuntu0.16.04.1
 -- PHP Version: 7.0.28-0ubuntu0.16.04.1
 
@@ -23,6 +23,22 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `junk_bank`
+--
+
+CREATE TABLE `junk_bank` (
+  `id` int(10) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `lat` varchar(255) DEFAULT NULL,
+  `lang` varchar(255) DEFAULT NULL,
+  `user_id` int(10) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `location`
 --
 
@@ -36,6 +52,21 @@ CREATE TABLE `location` (
   `status` varchar(255) NOT NULL,
   `user_id` int(10) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `messages`
+--
+
+CREATE TABLE `messages` (
+  `id` int(10) NOT NULL,
+  `user_id` int(10) NOT NULL,
+  `junk_bank_id` int(10) NOT NULL,
+  `message_send` varchar(255) DEFAULT NULL,
+  `message_reply` varchar(255) DEFAULT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -92,11 +123,26 @@ CREATE TABLE `user` (
 --
 
 --
+-- Indexes for table `junk_bank`
+--
+ALTER TABLE `junk_bank`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
 -- Indexes for table `location`
 --
 ALTER TABLE `location`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
+
+--
+-- Indexes for table `messages`
+--
+ALTER TABLE `messages`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `junk_bank_id` (`junk_bank_id`);
 
 --
 -- Indexes for table `photo_location`
@@ -123,6 +169,16 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `junk_bank`
+--
+ALTER TABLE `junk_bank`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `messages`
+--
+ALTER TABLE `messages`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `role`
 --
 ALTER TABLE `role`
@@ -137,10 +193,23 @@ ALTER TABLE `user`
 --
 
 --
+-- Constraints for table `junk_bank`
+--
+ALTER TABLE `junk_bank`
+  ADD CONSTRAINT `junk_bank_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Constraints for table `location`
 --
 ALTER TABLE `location`
   ADD CONSTRAINT `location_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `messages`
+--
+ALTER TABLE `messages`
+  ADD CONSTRAINT `messages_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `messages_ibfk_2` FOREIGN KEY (`junk_bank_id`) REFERENCES `junk_bank` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `photo_location`
