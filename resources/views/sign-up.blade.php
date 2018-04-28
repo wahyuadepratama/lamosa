@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <?php include_once 'layouts/head.php'; ?>
+@extends('layouts.app')
 
-  <body>
-    <?php include_once 'layouts/header.php'; ?>
+@section('content')
 
       <div class="container">
         <div class="card" style="margin-top:5%;">
@@ -61,20 +58,5 @@
           <center><small>Copyright &copy; by Lamosa Team</small></center>
         </div>
       </div>
-  </body>
-</html>
 
-<?php
-
-  require_once 'controller/Connect.php';
-  require_once 'controller/UserController.php';
-  require_once 'controller/ScriptController.php';
-
-  if(isset($_POST['submit'])){
-    $user = new user();
-    $user->store();var_dump($_POST['username']);
-
-    $script = new script();
-    $script->alert_redirect('Selamat Datang','Anda Berhasil Registrasi','home');
-  }
-?>
+@endsection

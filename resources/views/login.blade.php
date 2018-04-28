@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <?php include_once 'layouts/head.php'; ?>
-  <body>
-    <?php include_once 'layouts/header.php'; ?>
+@extends('layouts.app')
+
+@section('content')
 
       <div class="container">
           <div class="grid-login">
@@ -33,5 +31,4 @@
           <center><small>Copyright &copy; by Lamosa Team</small></center>
         </div>
       </div>
-  </body>
-</html>
+@endsection

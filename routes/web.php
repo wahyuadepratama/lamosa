@@ -17,3 +17,19 @@ Route::get('/lokasi/input-data', function () {
 
     return view('input-data');
 });
+Route::get('/login', function () {
+
+    return view('login');
+});
+Route::get('/register', function () {
+
+    return view('sign-up');
+});
+Route::get('/bank-sampah', function () {
+
+    return view('bank_sampah');
+});
+Route::get('/transaksi', function () {
+
+    return view('bank_sampah_');
+});

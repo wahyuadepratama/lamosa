@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding-left:100px;padding-right:100px;background-color:green">
   <a class="navbar-brand" href="#">
     <img src="{{ URL::asset('img/logo-lamosa2.png') }}" width="200" height="80" alt="">
   </a>
@@ -15,7 +15,7 @@
         <a class="nav-link" href="/lokasi">Lokasi</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Bank Sampah</a>
+        <a class="nav-link" href="/bank-sampah">Bank Sampah</a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="login.php">Login</a>
