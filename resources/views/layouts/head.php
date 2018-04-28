@@ -7,7 +7,7 @@
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
   <style>
-    #mapid { height: 370px; }
+    #mapid { height: 470px; }
   </style>
 
 </head>
