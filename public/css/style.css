@@ -28,9 +28,12 @@ li.nav-item.active>a.nav-link{
   width: 100%;
 }
 .pict{
-  width: 100px;
-  height: 100px;
+  width: 350px;
+  height: 200px;
   background-color: pink;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .row.home{
   padding: 20px;
@@ -47,10 +50,12 @@ li.nav-item.active>a.nav-link{
   grid-template-rows: 1fr 1fr 1fr;
   grid-gap:20px;
   grid-template-areas:
+  "content-0"
   "content-1"
   "content-2"
   "content-3"
 }
+.content-0{grid-area:content-0;}
 .content-1{grid-area:content-1;}
 .content-2{grid-area:content-2;}
 .content-3{grid-area:content-3;}
@@ -88,7 +93,7 @@ li.nav-item.active>a.nav-link{
   grid-template-areas:
   "login-box"
 }
-.login-box{grid-area:login-box; align-self: center;justify-self:center; text-align: justify}
+.login-box{grid-area:login-box; align-self: center;justify-self:center; text-align: justify;background-color: white;padding: 20px;border-radius: 5px;}
 .footer-login{grid-area:footer-login}
 
 a.list-group-item.title{
@@ -173,7 +178,7 @@ grid-template-areas:
 }
 
 .price{grid-area:price;border: 1px solid #e6e6e6; max-height: 320px;background-color: white;}
-.jual_beli{grid-area:jual_beli;background-color: white;}
+.jual_beli{grid-area:jual_beli;}
 .ket_bank{grid-area:ket_bank; min-height:150px;border: 1px solid #e6e6e6;background-color: white; }
 
 .grid-bank-sampah-0{
@@ -300,6 +305,65 @@ width:auto;height:180px;background-color:grey;
 table.table-jenis>tbody>tr>td{
   padding: 3px;
 }
+.grid-sign-up{
+  display: grid;
+
+  grid-template-columns: 500px 500px;
+  grid-templae-rows:1fr;
+  grid-template-areas:
+  "prekata sign-up-panel"
+}
+.panel-prekata{
+padding: 20px;
+color: white;
+}
+.prekata{grid-area:prekata; background-color: green;margin-left: 100px;}
+.sign-up-panel{
+grid-area: sign-up-panel;
+}
+.panel-sign-up{
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  border-top-left-radius: 0px;
+  background-color: white;
+
+}
+.panel-body-sign-up{
+  padding: 15px;
+  background-color: white;
+  font-size: 15px;
+}
+.panel-header-sign-up{
+  /*background-color: white;*/
+  padding: 15px;
+  /*border-top-right-radius: 10px;
+  border-top-left-radius: 10px;*/
+}
+h4.title-home{
+  color:green !important;
+  font-weight: bold !important;
+}
+.grid-prekata{
+  display: grid;
+  grid-template-columns:auto 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+  "icon kata-satu"
+  "icon2 kata-dua"
+  "icon3 kata-tiga"
+}
+.icon,.icon2,.icon3{
+  padding-right:10px;
+}
+.kata-satu,.kata-dua,.kata-tiga{
+  align-self: center;
+}
+.icon{grid-area:icon;}
+.icon2{grid-area:icon2}
+.icon3{grid-area:icon3}
+.kata-satu{grid-area:kata-satu}
+.kata-dua{grid-area:kata-dua}
+.kata-tiga{grid-area:kata-tiga}
 @media screen and (max-width:1199px) {
   .grid-bank-sampah-0{
     display: grid;
