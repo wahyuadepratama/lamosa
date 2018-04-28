@@ -5,8 +5,12 @@
   <!-- @include('layouts.header') -->
 
   @include('layouts.slider')
-
-  <div class="container">
+  <style media="screen">
+    body{
+      background-color: white;
+    }
+  </style>
+  <div class="container" style="background-color:white;">
     <div class="grid" style="padding: 20px 0px 20px 0px">
       <div class="content-1">
 

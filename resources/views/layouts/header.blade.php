@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding-left:100px;padding-right:100px;background-color:green">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="padding-left:100px;padding-right:100px;background-color:green">
   <a class="navbar-brand" href="#">
     <img src="{{ URL::asset('img/logo-lamosa2.png') }}" width="150" height="60" alt="">
   </a>

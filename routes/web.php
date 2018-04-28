@@ -21,3 +21,6 @@ Route::get('/bank-sampah','JunkBankController@index');
 Route::get('/profile', 'MessagesController@index');
 
 Route::post('/transaksi/send', 'MessagesController@store');
+Route::get('/jenis-sampah', function(){
+  return view('jenis-sampah');
+});

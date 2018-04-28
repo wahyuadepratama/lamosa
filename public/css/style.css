@@ -1,3 +1,17 @@
+@font-face {
+    font-family: CenturyGothic;
+    src: url('../fonts/century gothic.ttf');
+}
+*{
+  font-family: 'CenturyGothic';
+}
+body{
+  background-color: #eee;
+}
+.btn:focus,.btn:active {
+   outline: none !important;
+   box-shadow: none;
+}
 li.nav-item.active{
   background-color: green;
 }
@@ -18,7 +32,7 @@ li.nav-item.active>a.nav-link{
 .footer{
   margin-top: 60px;
   padding: 20px;
-  background-color: grey;
+  /*background-color: grey;*/
 }
 
 .grid{
@@ -102,7 +116,7 @@ div.list-group-item.title{
 
 .content-info{
   min-height: 150px;
-  background-color: #eee;
+  background-color: white;
   padding: 10px;
 }
 
@@ -126,6 +140,7 @@ div.list-group-item.title{
 }
 .panel-body{
 padding: 15px;
+background-color: white;
 display: grid;
 grid-template-columns: 1fr 1fr;
 grid-template-rows:1fr;
@@ -152,38 +167,65 @@ grid-template-areas:
   "jual_beli jual_beli price"
 }
 
-.price{grid-area:price;border: 1px solid #e6e6e6; max-height: 320px}
-.jual_beli{grid-area:jual_beli}
-.ket_bank{grid-area:ket_bank; min-height:150px;border: 1px solid #e6e6e6; }
+.price{grid-area:price;border: 1px solid #e6e6e6; max-height: 320px;background-color: white;}
+.jual_beli{grid-area:jual_beli;background-color: white;}
+.ket_bank{grid-area:ket_bank; min-height:150px;border: 1px solid #e6e6e6;background-color: white; }
 
 .grid-bank-sampah-0{
   display: grid;
   grid-template-columns:1fr 1fr 1fr;
   grid-auto-rows: min-content;
   grid-template-areas:
-  "list_sampah jenis_sampah jenis_sampah"
+  "list_sampah list_sampah list_sampah"
 }
-.jenis_sampah{grid-area:jenis_sampah;border: 1px solid #e6e6e6;}
+.grid-bank-sampah-1{
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr;
+  grid-auto-rows: min-content;
+  grid-template-areas:
+  "jenis_sampah jenis_sampah jenis_sampah"
+}
+.jenis_sampah{grid-area:jenis_sampah;}
 .list_sampah{grid-area:list_sampah}
 
 .list_sampah{
   grid-gap:20px;
   display:grid;
-  grid-template-columns:repeat(2, 1fr);
+  grid-template-columns:repeat(4, 1fr);
+  grid-auto-rows: min-content;
   padding: 10px;
   justify-items:center;
 }
 .panel-body-bank{
   padding: 15px;
+  background-color: white;
 }
 .box-content{
+  border-bottom: 1px solid #eee;
+  padding-top: 20px;
   padding-bottom: 20px;
   display: grid;
-  grid-template-columns:150px 1fr;
+  grid-template-columns:200px 1fr 1fr;
   grid-template-rows: 1fr;
   grid-gap: 20px;
   grid-template-areas:
-  "foto detail-desk"
+  "foto detail-desk bank-exist"
+}
+.bank-exist{
+ grid-area:bank-exist;
+ justify-self: center;
+ text-align: center;
+ align-self: center;
+ align-content: center;
+}
+.count-bank{
+  font-size: 4em;
+  text-align: center;
+}
+.box-count{
+  background-color: #ddd;
+  padding: 15px;
+  border-radius: 5px;
 }
 .foto{
   grid-area:foto;background-color: pink;
@@ -222,7 +264,7 @@ width:auto;height:180px;background-color:grey;
   "data-profile notif-transaksi"
   "footer-profile footer-profile"
 }
-.data-profile{grid-area: data-profile}
+.data-profile{grid-area: data-profile; background-color: white; border-bottom-right-radius: 5px;border-bottom-left-radius: 5px; }
 .notif-transaksi{grid-area: notif-transaksi}
 .panel-body-profile{
   padding: 15px;
@@ -242,6 +284,15 @@ width:auto;height:180px;background-color:grey;
   padding: 10px;
   border-top: 1px solid #ddd;
   grid-area:footer-profile;
+}
+.btn.btn-sidebar{
+  background-color: transparent;
+}
+.title-jenis{
+  font-weight: bold;
+}
+table.table-jenis>tbody>tr>td{
+  padding: 3px;
 }
 @media screen and (max-width:1199px) {
   .grid-bank-sampah-0{
