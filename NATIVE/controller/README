@@ -1,4 +1,0 @@
-Berisi file php yang akan digunakan aplikasi
-
-- setiap table memiliki satu class yang didefinisikan dalam satu file (example: classLocation.php)
-- folder routing dan leaflet yang dibutuhkan bisa dimasukann juga ke dalam folder controller ini

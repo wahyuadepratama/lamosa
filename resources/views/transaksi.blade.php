@@ -9,7 +9,12 @@
                 <h5>Harga Sampah</h5>
               </div>
               <div class="panel-body">
-
+                <ul class="list-group list-group-flush">
+                  @foreach($transaksi as $data)
+                  <li class="list-group-item">Nama Sampah: {{$data->junk_name}}</li>
+                  <li class="list-group-item">Harga: {{$data->price}}</li>
+                  @endforeach
+                </ul>
               </div>
             </div>
           </div>
@@ -37,35 +42,29 @@
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                   <div class="card-body">
                     <div class="row" style="padding:15px">
-                      <form>
+                      <form method="post" action="/transaksi/send">
+                        {{ csrf_field() }}
                         <div class="form-row">
                           <div class="form-group col-md-6">
-                            <label for="exampleFormControlSelect1">Example select</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                              <option>Type</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
+                            <label for="">Jenis Sampah</label>
+                            <select name="junk_name" class="form-control" id="">                              
+                              @foreach($transaksi as $data)
+                                <option value="{{$data->junk_name}}">{{$data->junk_name}}</option>
+                              @endforeach
                             </select>
                           </div>
                           <div class="form-group col-md-6">
-                            <label for="exampleFormControlSelect1">Example select</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                              <option>Number</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                            </select>
+                            <label for="">Berat Sampah (Kg)</label>
+                            <input class="form-control" type="number" name="berat" value="">
                           </div>
                           <div class="form-group col">
-                            <label for="exampleFormControlTextarea1">Deskripsi Lokasi</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <label for="">Deskripsi (optional)</label>
+                            <textarea name="deskripsi" class="form-control" id="" rows="3"></textarea>
                           </div>
                         </div>
                         <center>
                         <div class="form-group">
+                          <input type="hidden" name="junk_bank_id" value="{{$id}}">
                         <button type="submit" class="btn btn-success form-control">Submit</button>
                         </div>
                         </center>
@@ -75,6 +74,7 @@
                 </div>
               </div>
               <div class="card">
+
                 <div class="card-header" id="headingTwo">
                   <h5 class="mb-0">
                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -82,39 +82,34 @@
                     </button>
                   </h5>
                 </div>
+
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                   <div class="card-body">
                     <div class="row" style="padding:15px">
-                      <form>
+                      <form method="post" action="/transaksi/send">
+                        {{ csrf_field() }}
                         <div class="form-row">
                           <div class="form-group col-md-6">
-                            <label for="exampleFormControlSelect1">Example select</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                              <option>Type</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
+                            <label for="">Jenis Sampah</label>
+                            <select name="junk_name" class="form-control" id="">
+                              @foreach($transaksi as $data)
+                                <option value="{{$data->junk_name}}">{{$data->junk_name}}</option>
+                              @endforeach
                             </select>
                           </div>
                           <div class="form-group col-md-6">
-                            <label for="exampleFormControlSelect1">Example select</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                              <option>Number</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                            </select>
+                            <label for="">Berat Sampah (Kg)</label>
+                            <input class="form-control" type="number" name="berat" value="">
                           </div>
                           <div class="form-group col">
-                            <label for="exampleFormControlTextarea1">Deskripsi Lokasi</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <label for="">Deskripsi (optional)</label>
+                            <textarea name="deskripsi" class="form-control" id="" rows="3"></textarea>
                           </div>
                         </div>
                         <center>
                         <div class="form-group">
-                        <button type="submit" class="btn btn-success form-control">Request Penjualan</button>
+                        <input type="hidden" name="junk_bank_id" value="{{$id}}">
+                        <button type="submit" class="btn btn-success form-control">Submit</button>
                         </div>
                         </center>
                       </form>
@@ -130,6 +125,7 @@
         <!-- END GRID LOCATION -->
         </div>
         <!-- END CONTAINER -->
+
   @include('layouts.footer')
 
 @endsection
