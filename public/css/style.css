@@ -133,39 +133,28 @@ div.list-group-item.title{
 .grid-input-data{
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-rows: 1fr;
+  grid-template-rows: auto;
   grid-gap: 20px;
   grid-template-areas:
   "data-lokasi data-lokasi keterangan"
 }
 .data-lokasi{grid-area:data-lokasi;border: 1px solid #f7f7f7 !important;}
-.keterangan{grid-area:keterangan;min-width: 300px;border: 1px solid #ddd !important;}
+.keterangan{grid-area:keterangan;min-width: 300px;background-color: white}
 .panel{
   /*border: 1px solid #e6e6e6 !important;*/
+}
+.panel-body-input{
+  min-height: 300px;
+  background-color: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .panel-header{
   background-color: #f7f7f7;
   border-bottom: 1px solid #e6e6e6;
   padding: 15px;
 }
-.panel-body{
-padding: 15px;
-background-color: white;
-display: grid;
-grid-template-columns: 1fr 1fr;
-grid-template-rows:1fr;
-grid-template-areas:
-"data-info upload-foto"
-}
-.data-info{
-  grid-area:data-info;
-  padding: 15px;
 
-}
-.upload-foto{
-  grid-area:upload-foto;
-  padding: 15px;
-}
 
 .grid-bank-sampah{
   display: grid;
@@ -287,6 +276,8 @@ width:auto;height:180px;background-color:grey;
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto;
+  border-radius: 50%;
+  background-position: center;
 }
 .font-profile{
   font-size: 14px;
@@ -364,6 +355,19 @@ h4.title-home{
 .kata-satu{grid-area:kata-satu}
 .kata-dua{grid-area:kata-dua}
 .kata-tiga{grid-area:kata-tiga}
+
+.data-col{
+  background-color: white;
+  padding:20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+  "data-info upload-foto"
+
+}
+.data-info{grid-area: data-info;  border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;}
+.upload-foto{grid-area:upload-foto; padding-left: 20px;}
 @media screen and (max-width:1199px) {
   .grid-bank-sampah-0{
     display: grid;

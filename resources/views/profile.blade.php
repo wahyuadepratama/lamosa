@@ -9,7 +9,7 @@
               <div class="panel">
                 <div class="panel-header">Data Profile</div>
                 <div class="panel-body-profile">
-                  <div class="profile-pict"></div>
+                  <div class="profile-pict" style="background-image:url('img/wahyu.png')"></div>
                     <center>
                       <small>@wahyuadele04</small>
                       <p>wahyuadepratam4@gmail.com</p>

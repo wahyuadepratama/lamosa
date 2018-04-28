@@ -40,7 +40,7 @@
       </div>
       <div class="content-3">
 
-            <div class="pict" style="background-image:url('img/penyebaran.jpg');">
+            <div class="pict" style="background-image:url('img/sampah-bekas-2.jpg');">
 
             </div>
             <div class="desc">

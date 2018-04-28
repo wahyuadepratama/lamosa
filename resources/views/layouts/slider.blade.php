@@ -8,22 +8,22 @@
     <div class="carousel-item active">
       <img class="d-block w-100" src="img/Sampah1.png" alt="First slide">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Judul</h5>
-        <p>Deskripsi</p>
+        <h5>Pelaporan Lokasi Keberadaan Sampah</h5>
+        <p>Lamosa memberikan kemudahan bagi masarakat yang melalukakn pengaduan terkait sampah</p>
   </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="img/Sampah1.png" alt="Second slide">
+      <img class="d-block w-100" src="img/Sampah-bekas-2.jpg" alt="Second slide">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Judul</h5>
-        <p>Deskripsi</p>
+        <h5>Temukan Bank Sampah</h5>
+        <p>Lamosa memberikan akses bagi masyarakat untuk menemukan lokasi bank sampah.</p>
   </div>
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" src="img/Sampah1.png" alt="Third slide">
       <div class="carousel-caption d-none d-md-block">
-    <h5>Judul</h5>
-    <p>Deskripsi</p>
+        <h5>Pelaporan Lokasi Keberadaan Sampah</h5>
+        <p>Lamosa memberikan kemudahan bagi masarakat yang melalukakn pengaduan terkait sampah</p>
   </div>
     </div>
   </div>
