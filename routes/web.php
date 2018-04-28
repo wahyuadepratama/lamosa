@@ -1,19 +1,15 @@
 <?php
 
-// Route::get('/', function () { return view('home'); });
-//
-// Route::get('/input', function () { return view('input'); });
-// Route::post('/input', 'DataController@create');
 
+Auth::routes();
 Route::get('/', function () {
 
     return view('index');
 });
-Route::get('/lokasi', function () {
-
-    return view('lokasi');
-});
+Route::get('/lokasi','LocationController@index');
 Route::get('/lokasi/input-data', function () {
 
     return view('input-data');
 });
+
+Route::get('/home', 'HomeController@index')->name('home');

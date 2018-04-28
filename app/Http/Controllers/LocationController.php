@@ -2,10 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use DB;
+use Auth;
+use App\Location;
 use Illuminate\Http\Request;
 
 class LocationController extends Controller
 {
+    public function index(){
+
+      $location = DB::table('location')->get();
+      dd($location);
+      return view('lokasi', ['location' => $location]);
+    }
+
     public function store(Request $request){
 
       DB::table('location')->insert([
@@ -15,8 +25,9 @@ class LocationController extends Controller
           'lang'              => $request->lang,
           'type'              => $request->status,
           'status'            => $request->status,
-          'user_id'
+
           'created_at'       => \Carbon\Carbon::now()->toDateTimeString()
       ]);
     }
+
 }

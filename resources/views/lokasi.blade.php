@@ -31,11 +31,12 @@
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                   <div class="card-body">
                     <div class="list-group" id="list-tab" role="tablist">
-                      <a class="list-group-item list-group-item-action active" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings" onclick="gpsLokasi()">Posisi Saya</a>
-                      <a class="list-group-item list-group-item-action " id="list-home-list" data-toggle="list" role="tab" aria-controls="home" onclick="lokasiSampah()">Lokasi Sampah</a>
-                      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" role="tab" aria-controls="profile" onclick="lokasitpa()">Lokasi TPA</a>
-                      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list"  role="tab" aria-controls="messages" onclick="lokasibanksampah()">Bank Sampah</a>
-
+                      <form action="/lokasi" method="post">
+                        <button type="submit" class="list-group-item list-group-item-action active" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings" onclick="gpsLokasi()">Posisi Saya</button>
+                        <button type="submit" class="list-group-item list-group-item-action " id="list-home-list" data-toggle="list" role="tab" aria-controls="home" onclick="lokasiSampah()">Lokasi Sampah</button>
+                        <button type="submit" class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" role="tab" aria-controls="profile" onclick="lokasitpa()">Lokasi TPA</button>
+                        <button type="submit" class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list"  role="tab" aria-controls="messages" onclick="lokasibanksampah()">Bank Sampah</button>
+                      </form>
                     </div>
                   </div>
                 </div>
@@ -96,9 +97,6 @@
 
 
       <script src="js/map.js" charset="utf-8"></script>
-        <!-- <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaKLihHUYfMPMCdAgzPlsXamo9BthmImk&callback=initMap">
-        </script> -->
 
 
 
