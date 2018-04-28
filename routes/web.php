@@ -5,4 +5,15 @@
 // Route::get('/input', function () { return view('input'); });
 // Route::post('/input', 'DataController@create');
 
-Route::auth();
+Route::get('/', function () {
+
+    return view('index');
+});
+Route::get('/lokasi', function () {
+
+    return view('lokasi');
+});
+Route::get('/lokasi/input-data', function () {
+
+    return view('input-data');
+});

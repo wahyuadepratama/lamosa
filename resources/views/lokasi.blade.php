@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <?php include_once 'layouts/head.php'; ?>
-  <body>
-    <?php include_once 'layouts/header.php'; ?>
-    <?php include_once 'layouts/includeleaflet.php' ?>
-    <?php include_once 'controller/GetDataLokasi.php' ?>
-    <?php include_once 'controller/GetDataBank.php' ?>
+@extends('layouts.app')
 
-    <script>
-
-     var argeojson = <?php echo json_encode($data) ?>;
-     var argeojsonbank=<?php echo json_encode($bank)?>
-
-    </script>
+@section('content')
 
       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="crossorigin=""/>
       <!-- Make sure you put this AFTER Leaflet's CSS -->
@@ -105,15 +93,14 @@
         <!-- END GRID LOCATION -->
         </div>
         <!-- END CONTAINER -->
-        <?php include_once 'layouts/footer.php'; ?>
 
-      <script src="assets/js/map.js" charset="utf-8"></script>
+
+      <script src="js/map.js" charset="utf-8"></script>
         <!-- <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaKLihHUYfMPMCdAgzPlsXamo9BthmImk&callback=initMap">
         </script> -->
 
-        <script src="controller/map.js">
-      </script>
 
-  </body>
-</html>
+
+      @include('layouts.footer')
+@endsection

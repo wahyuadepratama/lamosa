@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <?php include_once 'layouts/head.php'; ?>
-  <body>
-    <?php include_once 'layouts/header.php'; ?>
+@extends('layouts.app')
+
+@section('content')
 
       <div class="container" style="padding-top:30px;">
           <div class="grid-input-data">
@@ -51,7 +49,5 @@
         <!-- END GRID LOCATION -->
       </div>
         <!-- END CONTAINER -->
-        <?php include_once 'layouts/footer.php'; ?>
-
-  </body>
-</html>
+      @include('layouts.footer')
+@endsection
