@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="shortcut icon" href="{{ URL::asset('favicon.ico') }}">
+    <link rel="shortcut icon" href="{{asset('favicon.ico')}}"  type="image/x-icon">
     <link rel="stylesheet" href="{{URL::asset('bootstrap/css/bootstrap.min.css') }}" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="{{URL::asset('css/style.css') }}" media="screen" title="no title" charset="utf-8">
     <script src="{{URL::asset('js/jquery-3.0.0.js') }}" charset="utf-8"></script>
@@ -27,15 +27,12 @@
     <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
 
-    <style>
-      #mapid { height: 470px; }
-    </style>
   </head>
   <body>
 
     @include('layouts.header')
 
     @yield('content')
-
+<script src="{{URL::asset('js/navbar-change.js')}}" charset="utf-8"></script>
   </body>
 </html>

@@ -11,8 +11,8 @@
                 <div class="panel-body-profile">
                   <div class="profile-pict"></div>
                     <center>
-                      <small>@wahyuadele04</small>
-                      <p>wahyuadepratam4@gmail.com</p>
+                      <small>{{Auth::user()->username}}</small>
+                      <p>{{Auth::user()->email}}</p>
                       <span class="badge badge-info" style="padding:10px;font-size:2em.">Warga</span>
                     </center>
                 </div>
@@ -30,12 +30,7 @@
                       <div class="card-header" id="headingOne" style="padding:0px;">
                         <h5 class="mb-0">
                           <a class="btn btn-link collapsed" data-toggle="collapse" data-target="#{{$message->id}}" aria-expanded="true">
-                            ({{$message->message_type}})
-                            @if($message->message_type=='Pengiriman')
-                              'Anda telah berhasil mengirim pesan ke ' {{$message->junk_bank_id}}
-                            @else
-                              'Anda menerima balasan dari '.$message->junk_bank_id
-                            @endif
+                            {{$message->message_type}}
                           </a>
                         </h5>
                       </div>
@@ -43,21 +38,34 @@
                       <div id="{{$message->id}}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                         <div class="card-body">
                           <table>
+                            @if($message->message_type=='Pengiriman' && Auth::user()->role_id == 4)
+                              <tr><td class="font-profile">Anda telah berhasil mengirim pesan ke {{$message->junk_bank_id}}</td></tr>
+
+                            @elseif($message->message_type == 'Pengiriman' && Auth::user()->role_id == 3)
+                              <tr><td class="font-profile">Anda menerima permintaan dari {{Auth::user()->username}}</td></tr>
+
+                            @elseif($message->message_type == 'Balasan' && Auth::user()->role_id == 4 )
+                              <tr><td class="font-profile">Anda menerima balasan dari {{$message->junk_bank_id}}</td></tr>
+
+                            @elseif($message->message_type == 'Balasan' && Auth::user()->role_id == 3)
+                              <tr><td class="font-profile">Anda telah berhasil mengirim pesan ke {{Auth::user()->username}}</td></tr>
+
+                            @endif
                             <tr>
                               <td><span class="font-profile">Jenis Sampah</span></td>
-                              <td>:</td>
-                              <td>{{$message->junk_name}}</td>
+                              <td class="font-profile">:</td>
+                              <td class="font-profile">{{$message->junk_name}}</td>
                             </tr>
                             <tr>
                               <td><span class="font-profile">Berat Sampah</span></td>
-                                <td>:</td>
-                                <td>{{$message->berat}}</td>
+                                <td class="font-profile">:</td>
+                                <td class="font-profile">{{$message->berat}}</td>
                             </tr>
 
                             <tr>
                               <td><span class="font-profile">Keterangan Lain</span></td>
-                                <td>:</td>
-                                <td>{{$message->message}}</td>
+                                <td class="font-profile">:</td>
+                                <td class="font-profile">{{$message->message}}</td>
                             </tr>
                           </table>
                         </div>

@@ -8,26 +8,34 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item ">
+
+      <li class="nav-item {{ Request::is('/') ? 'active' : '' }}">
         <a class="nav-link" href="/">Home</a>
       </li>
-      <li class="nav-item">
+
+      <li class="nav-item {{ Request::is('lokasi') ? 'active' : '' }}">
         <a class="nav-link" href="/lokasi">Lokasi</a>
       </li>
-      <li class="nav-item">
+
+      <li class="nav-item {{ Request::is('bank-sampah') ? 'active' : '' }}">
         <a class="nav-link" href="/bank-sampah">Bank Sampah</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/bank-sampah">Statistik</a>
+      <li class="nav-item {{ Request::is('statistik') ? 'active' : '' }}">
+        <a class="nav-link" href="/statistik">Statistik</a>
       </li>
-      <li class="nav-item active">
-        @if(Auth::guest())
+      @if(Auth::guest())
+      <li class="nav-item {{ Request::is('login') ? 'active' : '' }}">
           <a class="nav-link" href="/login">Login</a>
-        @else
-          <a class="nav-link" href="/logout">Logout</a>
-        @endif
       </li>
-
+      @endif
+      @if(!Auth::guest())
+      <li>
+          <a class="nav-link" href="/profile">Profile</a>
+      </li>
+      <li>
+          <a class="nav-link" href="/logout">Logout</a>
+      </li>
+      @endif
     </ul>
 
   </div>

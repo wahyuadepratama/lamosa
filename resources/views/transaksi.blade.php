@@ -47,7 +47,7 @@
                         <div class="form-row">
                           <div class="form-group col-md-6">
                             <label for="">Jenis Sampah</label>
-                            <select name="junk_name" class="form-control" id="">                              
+                            <select name="junk_name" class="form-control" id="">
                               @foreach($transaksi as $data)
                                 <option value="{{$data->junk_name}}">{{$data->junk_name}}</option>
                               @endforeach
@@ -73,8 +73,8 @@
                   </div>
                 </div>
               </div>
-              <div class="card">
 
+              <div class="card">
                 <div class="card-header" id="headingTwo">
                   <h5 class="mb-0">
                     <button class="btn btn-sidebar collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">

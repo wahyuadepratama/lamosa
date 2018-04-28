@@ -34,13 +34,14 @@ class MessagesController extends Controller
           'message_type'      => 'Pengiriman',
       ]);
 
-      return view('home');
+      return view('/');
     }
 
     public function index(){
 
       $message = DB::table('messages')
                   ->where('messages.user_id',Auth::user()->id)
+                  ->orderByRaw('updated_at DESC')
                   ->get();
 
       return view('profile', ['message' => $message]);
