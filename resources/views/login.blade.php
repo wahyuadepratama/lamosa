@@ -26,7 +26,7 @@
                 </div>
               </center>
             </div>
-          </div>
+          </div><br><br>
         <div class="footer-login">
           <center><small>Copyright &copy; by Lamosa Team</small></center>
         </div>
