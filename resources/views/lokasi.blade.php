@@ -31,12 +31,11 @@
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                   <div class="card-body">
                     <div class="list-group" id="list-tab" role="tablist">
-                      <form action="/lokasi" method="post">
-                        <button type="submit" class="list-group-item list-group-item-action active" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings" onclick="gpsLokasi()">Posisi Saya</button>
-                        <button type="submit" class="list-group-item list-group-item-action " id="list-home-list" data-toggle="list" role="tab" aria-controls="home" onclick="lokasiSampah()">Lokasi Sampah</button>
-                        <button type="submit" class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" role="tab" aria-controls="profile" onclick="lokasitpa()">Lokasi TPA</button>
-                        <button type="submit" class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list"  role="tab" aria-controls="messages" onclick="lokasibanksampah()">Bank Sampah</button>
-                      </form>
+                      <a class="list-group-item list-group-item-action active" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings" onclick="gpsLokasi()">Posisi Saya</a>
+                      <a class="list-group-item list-group-item-action " id="list-home-list" data-toggle="list" role="tab" aria-controls="home" onclick="lokasiSampah()">Lokasi Sampah</a>
+                      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" role="tab" aria-controls="profile" onclick="lokasitpa()">Lokasi TPA</a>
+                      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list"  role="tab" aria-controls="messages" onclick="lokasibanksampah()">Bank Sampah</a>
+
                     </div>
                   </div>
                 </div>
@@ -45,7 +44,7 @@
                 <div class="card-header" id="headingTwo">
                   <h5 class="mb-0">
                     <button class="btn btn-link collapsed dropdown-toggle" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      Input Data
+                      Laporkan Lokasi
                     </button>
                   </h5>
                 </div>
@@ -54,25 +53,22 @@
                     <div class="list-group" id="list-tab" role="tablist">
                       <form>
                         <div class="form-group">
-                          <label for="exampleFormControlInput1">Email address</label>
-                          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+                          <label for="exampleFormControlInput1">Judul</label>
+                          <input type="text" class="form-control" placeholder="" name="title">
                         </div>
                         <div class="form-group">
-                          <label for="exampleFormControlInput1">Email address</label>
-                          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+                          <label for="exampleFormControlInput1">Description</label>
+                          <input type="email" class="form-control" placeholder="" name="title">
                         </div>
                         <div class="form-group">
                           <label for="exampleFormControlSelect1">Example select</label>
                           <button type="button" name="button" class="btn btn-danger form-control" >+ Pilih Marker</button>
                         </div>
                         <div class="form-group">
-                          <label for="exampleFormControlSelect1">Example select</label>
+                          <label for="exampleFormControlSelect1">Jenis Lokasi</label>
                           <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                            <option>Lokasi Sampah</option>
+                            <option>Lokasi Tempat Pembuangan Akhir</option>                            
                           </select>
                         </div>
 
@@ -97,6 +93,9 @@
 
 
       <script src="js/map.js" charset="utf-8"></script>
+          <!-- <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaKLihHUYfMPMCdAgzPlsXamo9BthmImk&callback=initMap">
+          </script> -->
 
 
 

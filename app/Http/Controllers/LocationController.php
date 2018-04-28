@@ -12,7 +12,7 @@ class LocationController extends Controller
     public function index(){
 
       $location = DB::table('location')->get();
-      dd($location);
+      
       return view('lokasi', ['location' => $location]);
     }
 
