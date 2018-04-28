@@ -22,7 +22,7 @@
               <div class="card">
                 <div class="card-header" id="headingOne">
                   <h5 class="mb-0">
-                    <button class="btn btn-link dropdown-toggle" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="btn btn-sidebar dropdown-toggle" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                       Tampilkan Lokasi
                     </button>
                   </h5>
@@ -43,7 +43,7 @@
               <div class="card">
                 <div class="card-header" id="headingTwo">
                   <h5 class="mb-0">
-                    <button class="btn btn-link collapsed dropdown-toggle" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <button class="btn btn-sidebar collapsed dropdown-toggle" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                       Input Data
                     </button>
                   </h5>

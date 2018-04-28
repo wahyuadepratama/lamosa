@@ -6,7 +6,7 @@
           <div class="price">
             <div class="panel">
               <div class="panel-header">
-                <h5>Harga Sampah</h5>
+                <h6>Harga Sampah</h6>
               </div>
               <div class="panel-body">
 
@@ -28,7 +28,7 @@
               <div class="card" style="margin-bottom: 20px;">
                 <div class="card-header" id="headingOne">
                   <h5 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="btn btn-sidebar " type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                       Jual Sampah
                     </button>
                   </h5>
@@ -77,7 +77,7 @@
               <div class="card">
                 <div class="card-header" id="headingTwo">
                   <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <button class="btn btn-sidebar collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                       Beli Sampah
                     </button>
                   </h5>
