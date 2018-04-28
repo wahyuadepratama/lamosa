@@ -40,7 +40,7 @@
                       <form>
                         <div class="form-row">
                           <div class="form-group col-md-6">
-                            <label for="exampleFormControlSelect1">Example select</label>
+                            <label for="exampleFormControlSelect1">Jenis Sampah</label>
                             <select class="form-control" id="exampleFormControlSelect1">
                               <option>Type</option>
                               <option>2</option>
@@ -50,7 +50,7 @@
                             </select>
                           </div>
                           <div class="form-group col-md-6">
-                            <label for="exampleFormControlSelect1">Example select</label>
+                            <label for="exampleFormControlSelect1">Berat Sampah</label>
                             <select class="form-control" id="exampleFormControlSelect1">
                               <option>Number</option>
                               <option>2</option>
