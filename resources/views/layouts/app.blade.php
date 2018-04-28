@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <!-- <link rel="shortcut icon" href="{{!! URL::asset('img/favicon.png') !!}}"> -->
     <link rel="stylesheet" href="{{URL::asset('bootstrap/css/bootstrap.min.css') }}" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="{{URL::asset('css/style.css') }}" media="screen" title="no title" charset="utf-8">
     <script src="{{URL::asset('js/jquery-3.0.0.js') }}" charset="utf-8"></script>

@@ -11,5 +11,12 @@ Route::get('/lokasi/input-data', function () {
 
     return view('input-data');
 });
+Route::get('/logout','UserController@logout');
+Route::get('/bank-sampah', function () {
 
-Route::get('/home', 'HomeController@index')->name('home');
+    return view('bank_sampah');
+});
+Route::get('/transaksi', function () {
+
+    return view('bank_sampah_');
+});
