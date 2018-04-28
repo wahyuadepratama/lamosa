@@ -33,3 +33,7 @@ Route::get('/transaksi', function () {
 
     return view('bank_sampah_');
 });
+Route::get('/profile', function () {
+
+    return view('profile');
+});

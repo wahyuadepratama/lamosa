@@ -20,9 +20,9 @@
                   Belum memiliki akun? Silahkan daftar disini <a href="sign-up.php">sign up</a>
                 </p>
                 <div class="btn-group" role="group" aria-label="Basic example">
-                  <button type="button" class="btn "><img src="assets/img/google.svg" alt="" width="20"/> &nbsp; Google</button>
+                  <button type="button" class="btn login-sosmed"><img src="img/google.svg" alt="" width="20"/> &nbsp; Google</button>
                   <!-- <button type="button" class="btn btn-secondary">Middle</button> -->
-                  <button type="button" class="btn "><img src="assets/img/facebook.svg" alt="" width="20"/> &nbsp; Facebook</button>
+                  <button type="button" class="btn login-sosmed"><img src="img/facebook.svg" alt="" width="20"/> &nbsp; Facebook</button>
                 </div>
               </center>
             </div>

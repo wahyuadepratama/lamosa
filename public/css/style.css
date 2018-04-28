@@ -16,6 +16,7 @@ li.nav-item.active>a.nav-link{
   padding: 20px;
 }
 .footer{
+  margin-top: 60px;
   padding: 20px;
   background-color: grey;
 }
@@ -144,14 +145,14 @@ grid-template-areas:
 .grid-bank-sampah{
   display: grid;
   grid-template-columns:1fr 1fr 1fr;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto auto;
   grid-gap: 20px;
   grid-template-areas:
   "ket_bank ket_bank price"
   "jual_beli jual_beli price"
 }
 
-.price{grid-area:price;border: 1px solid #e6e6e6; }
+.price{grid-area:price;border: 1px solid #e6e6e6; max-height: 320px}
 .jual_beli{grid-area:jual_beli}
 .ket_bank{grid-area:ket_bank; min-height:150px;border: 1px solid #e6e6e6; }
 
@@ -205,6 +206,42 @@ grid-template-areas:
 .btn-02{grid-area:btn-02}
 .card-img-top{
 width:auto;height:180px;background-color:grey;
+}
+
+.login-sosmed{
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+}
+
+.grid-profile{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 2fr;
+  grid-gap: 20px;
+  grid-template-areas:
+  "data-profile notif-transaksi"
+  "footer-profile footer-profile"
+}
+.data-profile{grid-area: data-profile}
+.notif-transaksi{grid-area: notif-transaksi}
+.panel-body-profile{
+  padding: 15px;
+}
+.profile-pict{
+  width:150px;
+  height:150px;
+  background-color: green;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+}
+.font-profile{
+  font-size: 14px;
+}
+.footer-profile{
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  grid-area:footer-profile;
 }
 @media screen and (max-width:1199px) {
   .grid-bank-sampah-0{
