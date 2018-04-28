@@ -14,7 +14,7 @@
                   <input type="text" class="form-control" placeholder="password" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
                 <div class="input-group mb-3">
-                  <input type="submit" class="btn btn-success form-control" aria-describedby="basic-addon1">
+                  <input type="submit" class="btn btn-success form-control" aria-describedby="basic-addon1" value="Login">
                 </div>
                 <p>
                   Belum memiliki akun? Silahkan daftar disini <a href="sign-up.php">sign up</a>
