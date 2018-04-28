@@ -6,21 +6,21 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="assets/img/Sampah.jpg" alt="First slide">
+      <img class="d-block w-100" src="img/Sampah.jpg" alt="First slide">
       <div class="carousel-caption d-none d-md-block">
         <h5>Judul</h5>
         <p>Deskripsi</p>
   </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="assets/img/Sampah.jpg" alt="Second slide">
+      <img class="d-block w-100" src="img/Sampah.jpg" alt="Second slide">
       <div class="carousel-caption d-none d-md-block">
         <h5>Judul</h5>
         <p>Deskripsi</p>
   </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="assets/img/Sampah.jpg" alt="Third slide">
+      <img class="d-block w-100" src="img/Sampah.jpg" alt="Third slide">
       <div class="carousel-caption d-none d-md-block">
     <h5>Judul</h5>
     <p>Deskripsi</p>
